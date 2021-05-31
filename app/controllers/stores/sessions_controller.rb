@@ -14,6 +14,7 @@ class Stores::SessionsController < Devise::SessionsController
   end
 
   def respond_to_on_destroy
+    # byebug
     if current_store
       render json: {
         status: 200,
